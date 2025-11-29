@@ -33,7 +33,7 @@ export default function TabNavigation({
             }}
             title="Supprimer"
           >
-            ×
+            X
           </button>
         </div>
       ))}
