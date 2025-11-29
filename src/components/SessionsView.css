@@ -1,0 +1,108 @@
+.sessions-view {
+  height: 100vh;
+  height: 100dvh; /* Meilleur support mobile */
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.sessions-view.loading,
+.sessions-view.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 16px;
+}
+
+.sessions-view.error {
+  color: #dc3545;
+}
+
+.tab-content-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Scrolling fluide iOS */
+  padding-bottom: 80px; /* Espace pour la barre fixe */
+  
+}
+.tab-navigation-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  gap: 20px;
+}
+
+.empty-state h2 {
+  font-size: 24px;
+  color: #1e293b;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0052a3;
+}
+
+.btn-primary.large {
+  padding: 16px 32px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  gap: 16px;
+  color: #64748b;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Désactive le zoom sur les inputs */
+input, select, textarea {
+  font-size: 16px !important; /* Empêche le zoom iOS */
+}
