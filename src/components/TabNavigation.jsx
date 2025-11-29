@@ -25,7 +25,7 @@ export default function TabNavigation({
               e.stopPropagation()
               if (
                 confirm(
-                  `Supprimer la session ${session.matricule || session.idSession} ?`
+                  `Supprimer ma session ${session.matricule || session.idSession} ?`
                 )
               ) {
                 onDeleteSession(session.idSession)
