@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "dev:qr": "vite --host && npx qrcode-terminal http://$(ip route get 1.1.1.1 | awk '{print $7}'):3000",
-    "build": "vite build",
+    "dev": "vite",
+    "build": "npm run build:vite",
+    "build:vite": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
