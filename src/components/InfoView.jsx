@@ -1,7 +1,7 @@
 // src/components/InfoView.jsx
 import { Phone, Radio, Smartphone, Mail, Copy } from "lucide-react";
 import toast from "react-hot-toast";
-import './Infoview.css'
+import './InfoView.css';
 export default function InfoView() {
   const handleCall = (number) => {
     window.location.href = `tel:${number.replace(/[^0-9+]/g, "")}`;
