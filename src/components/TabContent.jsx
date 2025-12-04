@@ -345,6 +345,17 @@ export default function TabContent({ session, avions, onSessionUpdated }) {
                 value={t.champ1 || ""}
                 onChange={(e) => updateTractage(i, "champ1", e.target.value)}
               />
+              <input
+               placeholder="Début"
+               value={t.champ2 || ""}
+               onChange={(e) => updateTractage(i, "champ2", e.target.value)}
+              />
+
+             <input
+             placeholder="Fin"
+             value={t.champ3 || ""}
+             onChange={(e) => updateTractage(i, "champ3", e.target.value)}
+             />
             </div>
           ))}
         </div>
